@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="dist/bundle.js"></script>
+	<!-- <script src="bower_components/angular/angular.js"></script>
+	<script src="node_modules/rx/dist/rx.all.js"></script>
+	<script src="node_modules/rx-angular/rx.angular.js"></script>
+	<script>
+		var app = angular.module('app', ['rx']);
+
+		app.controller('MainCtrl', ['$scope', 'rx', function($scope, rx) {
+			$scope.$createObservableFunction('onClick')
+				  .map(function() {
+				  	return 1;
+				  })
+				  .scan(0, function(a, b) {
+				  	return a + b;
+				  }).startWith(0).digest($scope, 'clickCounter').subscribe();
+		}]);
+	</script> -->
+</head>
+<body ng-app="app">
+	<div ng-controller="MainCtrl">
+		<button ng-click="onClick()">Click me!</button>
+		<span>{{ clickCounter }}</span>
+	</div>
+</body>
+</html>
